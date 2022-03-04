@@ -1,31 +1,67 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
+import propTypes from "prop-types";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+} from "firebase/auth";
+import { auth } from "../firebase-config";
 
-const LoginPage = () => {
+import "../styles/LoginPage.css";
+
+const LoginPage = ({ setUser }) => {
   const [signInDetails, setSignInDetails] = useState();
   const [registerDetails, setRegisterDetails] = useState();
+  const [errorMessage, setErrorMessage] = useState();
+
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
 
   const handleSignInInputChange = (e) => {
     setSignInDetails({ ...signInDetails, [e.target.name]: e.target.value });
   };
 
-  const signIn = (e) => {
+  const signIn = async (e) => {
     e.preventDefault();
     console.log(signInDetails);
+    try {
+      const user = await signInWithEmailAndPassword(
+        auth,
+        signInDetails.email,
+        signInDetails.password
+      );
+      console.log(user);
+      e.target.reset();
+    } catch (error) {
+      console.log(error);
+      setErrorMessage(error.message);
+    }
   };
 
   const handleRegisterInputChange = (e) => {
     setRegisterDetails({ ...registerDetails, [e.target.name]: e.target.value });
   };
 
-  const register = (e) => {
+  const register = async (e) => {
     e.preventDefault();
     console.log(registerDetails);
+    try {
+      const user = await createUserWithEmailAndPassword(
+        auth,
+        registerDetails.email,
+        registerDetails.password
+      );
+      console.log(user);
+      e.target.reset();
+    } catch (error) {
+      console.log(error);
+      setErrorMessage(error.message);
+    }
   };
   return (
-    <div>
-      <h1>Login Page</h1>
-      <form onSubmit={signIn}>
+    <div className="Login">
+      <form onSubmit={signIn} className="Login__login">
         <input
           type="email"
           placeholder="email"
@@ -38,10 +74,12 @@ const LoginPage = () => {
           name="password"
           onChange={handleSignInInputChange}
         />
-        <button type="submit">Login!</button>
+        <button type="submit" className="Login__button">
+          Login
+        </button>
       </form>
       <hr />
-      <form onSubmit={register}>
+      <form onSubmit={register} className="Login__register">
         <input
           type="email"
           placeholder="email"
@@ -54,10 +92,17 @@ const LoginPage = () => {
           name="password"
           onChange={handleRegisterInputChange}
         />
-        <button type="submit">Register</button>
+        <button type="submit" className="Login__button">
+          Register
+        </button>
       </form>
+      {errorMessage && <p>Error! {errorMessage}</p>}
     </div>
   );
 };
 
 export default LoginPage;
+
+LoginPage.propTypes = {
+  setUser: propTypes.func.isRequired,
+};

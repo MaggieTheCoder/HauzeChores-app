@@ -1,0 +1,20 @@
+.App-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+.App-header h1{
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    letter-spacing: -2px;
+}
+.App-header h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+

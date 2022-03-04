@@ -1,0 +1,33 @@
+.Login{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Login__login{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.Login__register{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    font-family: 'Menlo', sans-serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.Login__button{
+    font-family: 'Menlo', sans-serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+    
+}
