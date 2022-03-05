@@ -3,6 +3,8 @@ import { signOut, onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase-config";
 import LoginPage from "./LoginPage";
 import "../styles/App.css";
+import DashBoard from "./DashBoard";
+
 import NavBar from "./NavBar";
 
 const App = () => {
@@ -24,6 +26,7 @@ const App = () => {
         <h3>Just get it done!</h3>
       </header>
       <LoginPage setUser={setUser} />
+      <DashBoard />
     </div>
   );
 };
