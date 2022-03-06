@@ -76,6 +76,67 @@ exports[`renders learn react link 1`] = `
         </button>
       </form>
     </div>
+    <div>
+      <div
+        class="add-task"
+      >
+        <form
+          class="task-list"
+        >
+          <label
+            for="type"
+          >
+            Type
+            <select
+              id="type"
+              name="type"
+            >
+              <option
+                value="Empty Dishwasher"
+              >
+                Empty Dishwasher
+              </option>
+              <option
+                value="Hoover living room"
+              >
+                Hoover living room
+              </option>
+              <option
+                value="Water the plants"
+              >
+                Water the plants
+              </option>
+            </select>
+          </label>
+          <button
+            type="submit"
+          >
+            Add
+          </button>
+        </form>
+      </div>
+      <div>
+        <h1>
+           Add team mates here 
+        </h1>
+      </div>
+      <div>
+        <h2>
+          Tab 1 
+        </h2>
+        <h2>
+          Tab 2 
+        </h2>
+        <h2>
+          Tab 3 
+        </h2>
+      </div>
+      <div>
+        <h1>
+          leader board
+        </h1>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
