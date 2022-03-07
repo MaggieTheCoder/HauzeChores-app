@@ -4,7 +4,6 @@ import { auth } from "../firebase-config";
 import LoginPage from "./LoginPage";
 import "../styles/App.css";
 import DashBoard from "./DashBoard";
-import Tabs from "./Tabs";
 import NavBar from "./NavBar";
 
 const App = () => {
@@ -25,9 +24,7 @@ const App = () => {
         <h1>Houze</h1>
         <h3>Just get it done!</h3>
       </header>
-      <LoginPage setUser={setUser} />
-      <DashBoard />
-      <Tabs />
+      {!user ? <LoginPage setUser={setUser} /> : <DashBoard />}
     </div>
   );
 };
