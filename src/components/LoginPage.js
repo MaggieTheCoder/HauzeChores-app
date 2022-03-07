@@ -67,12 +67,14 @@ const LoginPage = ({ setUser }) => {
           placeholder="email"
           name="email"
           onChange={handleSignInInputChange}
+          data-testid="login-email"
         />
         <input
           type="password"
           placeholder="password"
           name="password"
           onChange={handleSignInInputChange}
+          data-testid="login-password"
         />
         <button type="submit" className="Login__button">
           Login
@@ -85,12 +87,14 @@ const LoginPage = ({ setUser }) => {
           placeholder="email"
           name="email"
           onChange={handleRegisterInputChange}
+          data-testid="register-email"
         />
         <input
           type="password"
           placeholder="password"
           name="password"
           onChange={handleRegisterInputChange}
+          data-testid="register-password"
         />
         <button type="submit" className="Login__button">
           Register

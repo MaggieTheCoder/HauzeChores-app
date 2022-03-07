@@ -1,0 +1,18 @@
+.add-task {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.task__list {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+button{
+    font-family: 'Menlo', sans-serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+    
+}
