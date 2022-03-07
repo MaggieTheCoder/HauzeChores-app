@@ -1,19 +1,20 @@
 import { React, useState } from "react";
+import "../styles/AddTask.css";
 
 const AddTask = () => {
   const [fields, setFields] = useState();
 
   const handleAddTask = (event) => {
     event.preventDefault();
+    console.log(fields);
   };
   const handleFieldChange = (event) => {
     setFields(event.target.value);
-    console.log(fields);
   };
 
   return (
     <div className="add-task">
-      <form className="task-list" onSubmit={handleAddTask}>
+      <form className="task__list" onSubmit={handleAddTask}>
         <label htmlFor="type">
           Type
           <select
@@ -28,7 +29,7 @@ const AddTask = () => {
           </select>
         </label>
 
-        <button type="submit">Add</button>
+        <button type="submit">Add Task</button>
       </form>
     </div>
   );
