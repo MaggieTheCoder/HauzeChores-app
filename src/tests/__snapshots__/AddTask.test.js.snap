@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddTask component renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="add-task"
+  >
+    <form
+      class="task__list"
+    >
+      <label
+        for="type"
+      >
+        Type
+        <select
+          id="type"
+          name="type"
+        >
+          <option
+            value="Empty Dishwasher"
+          >
+            Empty Dishwasher
+          </option>
+          <option
+            value="Hoover living room"
+          >
+            Hoover living room
+          </option>
+          <option
+            value="Water the plants"
+          >
+            Water the plants
+          </option>
+        </select>
+      </label>
+      <button
+        type="submit"
+      >
+        Add Task
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;
