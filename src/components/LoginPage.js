@@ -6,8 +6,8 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { auth } from "../firebase-config";
-
 import "../styles/LoginPage.css";
+import postNewUser from "../requests/postNewUser";
 
 const LoginPage = ({ setUser }) => {
   const [signInDetails, setSignInDetails] = useState();
@@ -53,6 +53,7 @@ const LoginPage = ({ setUser }) => {
         registerDetails.password
       );
       console.log(user);
+      postNewUser(registerDetails.email);
       e.target.reset();
     } catch (error) {
       console.log(error);
