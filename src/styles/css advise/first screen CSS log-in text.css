@@ -1,0 +1,8 @@
+@charset "utf-8";
+	.NormalCharacterStyle
+{
+	font-family : Menlo;
+	font-size : 60px;
+	color : #FFFFFF;
+	color : rgb(255, 255, 255);
+}
