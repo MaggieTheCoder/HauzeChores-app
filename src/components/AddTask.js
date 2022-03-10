@@ -28,7 +28,7 @@ const AddTask = () => {
       <div className="add-task">
         <form className="task__list" onSubmit={handleAddTask}>
           <label htmlFor="type">
-            Type
+            Task
             <select
               id="type"
               name="type"
@@ -42,14 +42,14 @@ const AddTask = () => {
             </select>
           </label>
 
-          {!custom && <button type="submit">Add Task</button>}
+          {!custom && <button type="submit">Add</button>}
         </form>
       </div>
       {custom && (
         <div className="custom-task">
           <form onSubmit={handleAddTask}>
             <input type="text" onChange={handleInput} placeholder="add task" />
-            <button type="submit">Add Task</button>
+            <button type="submit">Add</button>
           </form>
         </div>
       )}

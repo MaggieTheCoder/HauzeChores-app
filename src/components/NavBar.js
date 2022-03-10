@@ -1,9 +1,10 @@
 import React from "react";
 import propTypes from "prop-types";
+import "../styles/NavBar.css";
 
 const NavBar = ({ user, logOut }) => {
   return (
-    <nav>
+    <nav className="navbar">
       {user && (
         <div>
           <p>Logged in as {user.email}</p>

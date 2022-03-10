@@ -1,31 +1,31 @@
 .tabs {
-    display: flex;
+  display: flex;
 }
 
 .tab {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: lightsteelblue;
-    padding: 2em 0;
-    border: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: lightsteelblue;
+  padding: 2em 0;
+  border: none;
 }
 
 .tab:not(:last-child) {
-    border-right: 1px solid steelblue
+  border-right: 1px solid steelblue;
 }
 
 .tab.active {
-    background: steelblue;
-    font-weight: bold;
+  background: white;
+  font-weight: bold;
 }
 
 .tab-content__panel {
-    display: none;
-    background-color: #eaeaea;
-    padding: 10px;
+  display: none;
+  background-color: #eaeaea;
+  padding: 10px;
 }
 
 .tab-content__panel:active {
-    display: block;
+  display: block;
 }

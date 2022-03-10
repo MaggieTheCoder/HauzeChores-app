@@ -12,17 +12,17 @@ const AddTeam = () => {
   };
 
   return (
-    <div className="add__team">
+    <div className="add-team">
       <form>
-        <h3> Add team mate</h3>
+        Invite
         <input
           className="input__box"
           type="text"
-          placeholder="type name"
+          placeholder="email"
           onChange={handleAddMember}
         />
         <button type="button" onClick={() => handleSubmit()}>
-          Add team mate
+          Send
         </button>
       </form>
     </div>

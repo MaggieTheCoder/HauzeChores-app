@@ -8,8 +8,11 @@ import {
 import { auth } from "../firebase-config";
 import "../styles/LoginPage.css";
 import postNewUser from "../requests/postNewUser";
+import Header from "./Header";
+import Footer from "./Footer";
+import getHouseId from "../requests/getHouseId";
 
-const LoginPage = ({ setUser }) => {
+const LoginPage = ({ setUser, setHouseId }) => {
   const [signInDetails, setSignInDetails] = useState();
   const [registerDetails, setRegisterDetails] = useState();
   const [errorMessage, setErrorMessage] = useState();
@@ -32,6 +35,7 @@ const LoginPage = ({ setUser }) => {
         signInDetails.password
       );
       console.log(user);
+      getHouseId(signInDetails.email, setHouseId);
       e.target.reset();
     } catch (error) {
       console.log(error);
@@ -61,48 +65,52 @@ const LoginPage = ({ setUser }) => {
     }
   };
   return (
-    <div className="Login">
-      <form onSubmit={signIn} className="Login__login">
-        <input
-          type="email"
-          placeholder="email"
-          name="email"
-          onChange={handleSignInInputChange}
-          data-testid="login-email"
-        />
-        <input
-          type="password"
-          placeholder="password"
-          name="password"
-          onChange={handleSignInInputChange}
-          data-testid="login-password"
-        />
-        <button type="submit" className="Login__button">
-          Login
-        </button>
-      </form>
-      <hr />
-      <form onSubmit={register} className="Login__register">
-        <input
-          type="email"
-          placeholder="email"
-          name="email"
-          onChange={handleRegisterInputChange}
-          data-testid="register-email"
-        />
-        <input
-          type="password"
-          placeholder="password"
-          name="password"
-          onChange={handleRegisterInputChange}
-          data-testid="register-password"
-        />
-        <button type="submit" className="Login__button">
-          Register
-        </button>
-      </form>
-      {errorMessage && <p>Error! {errorMessage}</p>}
-    </div>
+    <>
+      <Header />
+      <div className="Login">
+        <form onSubmit={signIn} className="Login__login">
+          <input
+            type="email"
+            placeholder="email"
+            name="email"
+            onChange={handleSignInInputChange}
+            data-testid="login-email"
+          />
+          <input
+            type="password"
+            placeholder="password"
+            name="password"
+            onChange={handleSignInInputChange}
+            data-testid="login-password"
+          />
+          <button type="submit" className="Login__button">
+            Login
+          </button>
+        </form>
+        <hr />
+        <form onSubmit={register} className="Login__register">
+          <input
+            type="email"
+            placeholder="email"
+            name="email"
+            onChange={handleRegisterInputChange}
+            data-testid="register-email"
+          />
+          <input
+            type="password"
+            placeholder="password"
+            name="password"
+            onChange={handleRegisterInputChange}
+            data-testid="register-password"
+          />
+          <button type="submit" className="Login__button">
+            Register
+          </button>
+        </form>
+        {errorMessage && <p>Error! {errorMessage}</p>}
+      </div>
+      <Footer />
+    </>
   );
 };
 
@@ -110,4 +118,5 @@ export default LoginPage;
 
 LoginPage.propTypes = {
   setUser: propTypes.func.isRequired,
+  setHouseId: propTypes.func.isRequired,
 };
