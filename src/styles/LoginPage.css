@@ -1,33 +1,36 @@
-.Login{
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.Login {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(178, 225, 239);
 }
 
-.Login__login{
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
+.Login__login {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
 }
 
-.Login__register{
-    width: 60%;
-    display: flex;
-    flex-direction: column;
+.Login__register {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
 }
 
-input{
-    font-family: 'Menlo', sans-serif;
-    font-size: 25px;
-    margin-bottom: 10px;
-    text-align: center;
+input {
+  font-family: "Menlo", sans-serif;
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-.Login__button{
-    font-family: 'Menlo', sans-serif;
-    font-size: 25px;
-    margin-bottom: 10px;
-    
+.Login__button {
+  font-family: "Menlo", sans-serif;
+  font-size: 25px;
+  margin-bottom: 10px;
+  background-color: #bf1689;
+  color: white;
 }

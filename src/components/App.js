@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase-config";
@@ -5,9 +6,11 @@ import LoginPage from "./LoginPage";
 import "../styles/App.css";
 import DashBoard from "./DashBoard";
 import NavBar from "./NavBar";
+import AddHouse from "./AddHouse";
 
 const App = () => {
   const [user, setUser] = useState({});
+  const [houseId, setHouseId] = useState(0);
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
@@ -20,11 +23,9 @@ const App = () => {
   return (
     <div className="App">
       <NavBar user={user} logOut={logOut} />
-      <header className="App-header">
-        <h1>Houze</h1>
-        <h3>Just get it done!</h3>
-      </header>
-      {!user ? <LoginPage setUser={setUser} /> : <DashBoard />}
+      {!user && <LoginPage setUser={setUser} setHouseId={setHouseId} />}
+      {user && !houseId && <AddHouse />}
+      {user && houseId && <DashBoard />}
     </div>
   );
 };

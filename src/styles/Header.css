@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+.header h1 {
+  font-size: 70px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  letter-spacing: -2px;
+  color: #bf1689;
+}
+.header h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: rgb(68, 10, 149);
+}
+
+.header__banner {
+  background-color: #bf1689;
+  color: #bf1689;
+  height: 70px;
+  width: 100%;
+}

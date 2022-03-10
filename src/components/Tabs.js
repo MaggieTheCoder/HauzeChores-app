@@ -13,8 +13,6 @@ const Tabs = () => {
 
   return (
     <>
-      {activeIndex}
-
       <div className="tabs">
         <button
           type="button"
