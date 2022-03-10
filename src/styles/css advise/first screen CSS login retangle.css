@@ -1,0 +1,18 @@
+@charset "utf-8";
+	.log-in_retangle
+{
+	background : #C60982;
+	background : rgba(198, 9, 130, 1);
+	border-style : Solid;
+	border-color : #000000;
+	border-color : rgba(0, 0, 0, 1);
+	border-width : 3px;
+	position : absolute ;
+	left : 240px;
+	top : 1428px;
+	width : 644px;
+	height : 111px;
+	border-radius : 33px;
+	-moz-border-radius : 33px;
+	-webkit-border-radius : 33px;
+}
