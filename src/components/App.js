@@ -24,8 +24,10 @@ const App = () => {
     <div className="App">
       <NavBar user={user} logOut={logOut} />
       {!user && <LoginPage setUser={setUser} setHouseId={setHouseId} />}
-      {user && !houseId && <AddHouse />}
-      {user && houseId && <DashBoard />}
+      {user && !houseId && (
+        <AddHouse setHouseId={setHouseId} houseId={houseId} user={user} />
+      )}
+      {user && houseId && <DashBoard houseId={houseId} />}
     </div>
   );
 };
