@@ -7,12 +7,13 @@ import LeaderBoard from "./LeaderBoard";
 import Tabs from "./Tabs";
 import "../styles/Dashboard.css";
 
-const DashBoard = ({ houseId }) => {
+const DashBoard = ({ houseId, userId }) => {
   return (
     <div className="dashboard">
-      {houseId}
+      <p>user: {userId}</p>
+      <p>house: {houseId}</p>
       {/* <AddHouse /> */}
-      <AddTask />
+      <AddTask houseId={houseId} userId={userId} />
       <AddTeam />
       <Tabs />
       <LeaderBoard />
@@ -24,4 +25,5 @@ export default DashBoard;
 
 DashBoard.propTypes = {
   houseId: propTypes.number.isRequired,
+  userId: propTypes.number.isRequired,
 };

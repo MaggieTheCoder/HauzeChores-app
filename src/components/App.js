@@ -11,6 +11,7 @@ import AddHouse from "./AddHouse";
 const App = () => {
   const [user, setUser] = useState({});
   const [houseId, setHouseId] = useState(0);
+  const [userId, setUserId] = useState(0);
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
@@ -23,11 +24,17 @@ const App = () => {
   return (
     <div className="App">
       <NavBar user={user} logOut={logOut} />
-      {!user && <LoginPage setUser={setUser} setHouseId={setHouseId} />}
+      {!user && (
+        <LoginPage
+          setUser={setUser}
+          setHouseId={setHouseId}
+          setUserId={setUserId}
+        />
+      )}
       {user && !houseId && (
         <AddHouse setHouseId={setHouseId} houseId={houseId} user={user} />
       )}
-      {user && houseId && <DashBoard houseId={houseId} />}
+      {user && houseId && <DashBoard houseId={houseId} userId={userId} />}
     </div>
   );
 };
