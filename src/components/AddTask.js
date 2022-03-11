@@ -1,13 +1,16 @@
+/* eslint-disable no-unused-vars */
 import { React, useState } from "react";
+import propTypes from "prop-types";
 import "../styles/AddTask.css";
+import postNewTask from "../requests/postNewTask";
 
-const AddTask = () => {
-  const [fields, setFields] = useState();
+const AddTask = ({ houseId, userId }) => {
+  const [task, setTask] = useState();
   const [custom, setCustom] = useState(false);
 
   const handleAddTask = (event) => {
     event.preventDefault();
-    // console.log("****", fields);
+    postNewTask(task, houseId);
   };
   const handleFieldChange = (event) => {
     console.log("**", event.target.value);
@@ -15,12 +18,12 @@ const AddTask = () => {
       setCustom(true);
     } else {
       setCustom(false);
-      setFields(event.target.value);
+      setTask(event.target.value);
     }
   };
   const handleInput = (event) => {
     // console.log(event.target.value, fields);
-    setFields(event.target.value);
+    setTask(event.target.value);
   };
 
   return (
@@ -32,7 +35,7 @@ const AddTask = () => {
             <select
               id="type"
               name="type"
-              value={fields}
+              value={task}
               onChange={handleFieldChange}
             >
               <option value="Empty Dishwasher">Empty Dishwasher</option>
@@ -58,3 +61,8 @@ const AddTask = () => {
 };
 
 export default AddTask;
+
+AddTask.propTypes = {
+  houseId: propTypes.number.isRequired,
+  userId: propTypes.number.isRequired,
+};

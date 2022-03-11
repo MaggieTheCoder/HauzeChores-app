@@ -33,7 +33,7 @@ const Tabs = () => {
           className={`tab ${checkActive(3, "active")}`}
           onClick={() => handleClick(3)}
         >
-          My Streak{" "}
+          Leaderboard{" "}
         </button>
       </div>
       {activeIndex === 1 && (

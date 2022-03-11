@@ -1,15 +1,16 @@
 import axios from "axios";
 
-const getHouseId = (email, setHouseId) => {
+const setUserDetailsOnLogin = (email, setHouseId, setUserId) => {
   axios
     .get(`http://localhost:4000/email?email=${email}`)
     .then((res) => {
       console.log(res);
       setHouseId(res.data.houseID);
+      setUserId(res.data.id);
     })
     .catch((error) => {
       console.log(error);
     });
 };
 
-export default getHouseId;
+export default setUserDetailsOnLogin;
