@@ -2,7 +2,7 @@ import axios from "axios";
 
 const setUserDetailsOnLogin = (email, setHouseId, setUserId) => {
   axios
-    .get(`http://localhost:4000/email?email=${email}`)
+    .get(`http://localhost:4000/query/users/?email=${email}`)
     .then((res) => {
       console.log(res);
       setHouseId(res.data.houseID);

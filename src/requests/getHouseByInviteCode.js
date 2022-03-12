@@ -31,7 +31,7 @@ const getHouseByInviteCode = async (inviteCode, setHouseId, email) => {
   try {
     console.log(id);
     setHouseId(response.data.id);
-    await axios.patch(`http://localhost:4000/email?email=${email}`, {
+    await axios.patch(`http://localhost:4000/query/users/?email=${email}`, {
       houseid: response.data.id,
     });
   } catch (error) {

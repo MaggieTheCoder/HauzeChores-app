@@ -1,7 +1,11 @@
+/* eslint-disable react/destructuring-assignment */
 import React, { useState } from "react";
+import propTypes from "prop-types";
 import "../styles/Tabs.css";
+import Task from "./Task";
+import UserTask from "./UserTask";
 
-const Tabs = () => {
+const Tabs = ({ houseTasks, setAddedANewTask, userId, userTasks }) => {
   const [activeIndex, setActiveIndex] = useState(1);
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -39,12 +43,17 @@ const Tabs = () => {
       {activeIndex === 1 && (
         <div className="panels">
           <div className={`panel ${checkActive(1, "active")}`}>
-            <p>
-              {" "}
-              Tab 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Aenean erat ligula, feugiat at felis vitae, porttitor lacinia
-              quam.
-            </p>
+            {houseTasks.map((task) => {
+              return (
+                <Task
+                  taskname={task.taskname}
+                  key={task.id}
+                  id={parseInt(task.id, 10)}
+                  setAddedANewTask={setAddedANewTask}
+                  userId={userId}
+                />
+              );
+            })}
           </div>
         </div>
       )}
@@ -53,10 +62,9 @@ const Tabs = () => {
         <div className="panels">
           <div className={`panel ${checkActive(1, "active")}`}>
             <p>
-              {" "}
-              Tab 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Aenean erat ligula, feugiat at felis vitae, porttitor lacinia
-              quam.
+              {userTasks.map((task) => {
+                return <UserTask taskname={task.taskname} key={task.id} />;
+              })}
             </p>
           </div>
         </div>
@@ -79,3 +87,10 @@ const Tabs = () => {
 };
 
 export default Tabs;
+
+Tabs.propTypes = {
+  houseTasks: propTypes.instanceOf(Array).isRequired,
+  userTasks: propTypes.instanceOf(Array).isRequired,
+  setAddedANewTask: propTypes.func.isRequired,
+  userId: propTypes.string.isRequired,
+};
