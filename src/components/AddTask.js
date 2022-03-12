@@ -4,13 +4,14 @@ import propTypes from "prop-types";
 import "../styles/AddTask.css";
 import postNewTask from "../requests/postNewTask";
 
-const AddTask = ({ houseId, userId }) => {
+const AddTask = ({ houseId, userId, setAddedANewTask }) => {
   const [task, setTask] = useState();
   const [custom, setCustom] = useState(false);
 
-  const handleAddTask = (event) => {
+  const handleAddTask = async (event) => {
     event.preventDefault();
-    postNewTask(task, houseId);
+    await postNewTask(task, houseId);
+    setAddedANewTask((prev) => prev + 1);
   };
   const handleFieldChange = (event) => {
     console.log("**", event.target.value);
@@ -29,7 +30,7 @@ const AddTask = ({ houseId, userId }) => {
   return (
     <>
       <div className="add-task">
-        <form className="task__list" onSubmit={handleAddTask}>
+        <form className="task__list">
           <label htmlFor="type">
             Task
             <select
@@ -45,14 +46,26 @@ const AddTask = ({ houseId, userId }) => {
             </select>
           </label>
 
-          {!custom && <button type="submit">Add</button>}
+          {!custom && (
+            <button
+              type="button"
+              onClick={() => postNewTask(task, houseId, setAddedANewTask)}
+            >
+              Add
+            </button>
+          )}
         </form>
       </div>
       {custom && (
         <div className="custom-task">
           <form onSubmit={handleAddTask}>
             <input type="text" onChange={handleInput} placeholder="add task" />
-            <button type="submit">Add</button>
+            <button
+              type="button"
+              onClick={() => postNewTask(task, houseId, setAddedANewTask)}
+            >
+              Add
+            </button>
           </form>
         </div>
       )}
@@ -65,4 +78,5 @@ export default AddTask;
 AddTask.propTypes = {
   houseId: propTypes.number.isRequired,
   userId: propTypes.number.isRequired,
+  setAddedANewTask: propTypes.bool.isRequired,
 };
