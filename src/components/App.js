@@ -12,6 +12,7 @@ const App = () => {
   const [user, setUser] = useState({});
   const [houseId, setHouseId] = useState(0);
   const [userId, setUserId] = useState(0);
+  const [inviteCode, setInviteCode] = useState("");
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
@@ -32,7 +33,12 @@ const App = () => {
         />
       )}
       {user && !houseId && (
-        <AddHouse setHouseId={setHouseId} houseId={houseId} user={user} />
+        <AddHouse
+          setHouseId={setHouseId}
+          houseId={houseId}
+          user={user}
+          setInviteCode={setInviteCode}
+        />
       )}
       {user && houseId && <DashBoard houseId={houseId} userId={userId} />}
     </div>
