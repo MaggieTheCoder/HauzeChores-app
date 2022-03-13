@@ -10,6 +10,7 @@ const Tabs = ({ houseTasks, setAddedANewTask, userId, userTasks }) => {
   const handleClick = (index) => {
     setActiveIndex(index);
     console.log("button clicked", index);
+    setAddedANewTask((prev) => prev + 1);
   };
 
   const checkActive = (index, className) =>

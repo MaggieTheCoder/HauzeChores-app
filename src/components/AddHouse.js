@@ -8,9 +8,9 @@ import {
   animals,
 } from "unique-names-generator";
 import postNewHouse from "../requests/postNewHouse";
-import getHouseByInviteCode from "../requests/getHouseByInviteCode";
+import setNewUserDetails from "../requests/setNewUserDetails";
 
-const AddHouse = ({ setHouseId, houseId, user }) => {
+const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
   const [name, setName] = useState();
   const [visibleItem, setVisibleItem] = useState(false);
   const [inviteCode, setInviteCode] = useState("");
@@ -32,10 +32,11 @@ const AddHouse = ({ setHouseId, houseId, user }) => {
     setInviteCode(randomString);
     setVisibleItem(true);
     setRandomStr(randomString);
+    setCode(randomStr);
   };
 
   const handleHouseIDChange = () => {
-    getHouseByInviteCode(inviteCode, setHouseId, user.email);
+    setNewUserDetails(inviteCode, setHouseId, user.email, setUserId, setCode);
   };
   return (
     <div className="add-house">
@@ -76,6 +77,8 @@ export default AddHouse;
 
 AddHouse.propTypes = {
   setHouseId: propTypes.func.isRequired,
+  setUserId: propTypes.func.isRequired,
   user: propTypes.shape().isRequired,
   houseId: propTypes.number.isRequired,
+  setCode: propTypes.func.isRequired,
 };

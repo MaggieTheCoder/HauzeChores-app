@@ -76,7 +76,7 @@ const AddTask = ({ houseId, userId, setAddedANewTask }) => {
 export default AddTask;
 
 AddTask.propTypes = {
-  houseId: propTypes.number.isRequired,
-  userId: propTypes.number.isRequired,
+  houseId: propTypes.string.isRequired,
+  userId: propTypes.string.isRequired,
   setAddedANewTask: propTypes.bool.isRequired,
 };

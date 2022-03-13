@@ -10,15 +10,17 @@ import "../styles/Dashboard.css";
 import getAllHouseTasks from "../requests/getAllHouseTasks";
 import getAllUserTasks from "../requests/getAllUserTasks";
 
-const DashBoard = ({ houseId, userId }) => {
+const DashBoard = ({ houseId, userId, setUserId }) => {
   const [houseTasks, setHouseTasks] = useState([]);
   const [userTasks, setUserTasks] = useState([]);
   const [addedANewTask, setAddedANewTask] = useState(1);
+
   useEffect(() => {
     console.log("page renderig", addedANewTask);
-    getAllHouseTasks(houseId, setHouseTasks);
+    getAllHouseTasks(houseId, setHouseTasks, userId, setUserTasks);
     getAllUserTasks(userId, setUserTasks);
   }, [addedANewTask]);
+
   return (
     <div className="dashboard">
       <p>user: {userId}</p>
@@ -46,4 +48,5 @@ export default DashBoard;
 DashBoard.propTypes = {
   houseId: propTypes.number.isRequired,
   userId: propTypes.number.isRequired,
+  setUserId: propTypes.func.isRequired,
 };
