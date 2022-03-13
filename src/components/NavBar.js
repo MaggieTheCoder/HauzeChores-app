@@ -1,17 +1,25 @@
 import React from "react";
 import propTypes from "prop-types";
 import "../styles/NavBar.css";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const NavBar = ({ user, logOut, code }) => {
   return (
     <nav className="navbar">
       {user && (
         <div>
-          <p>Logged in as {user.email}</p>
-          <button type="button" onClick={() => logOut()}>
-            Log out
+          <Header />
+          <p className="user">Logged in as {user.email}</p>
+          <button
+            className="logout_button"
+            type="button"
+            onClick={() => logOut()}
+          >
+            LOG OUT
           </button>
           {code && <p>{code}</p>}
+          <Footer />
         </div>
       )}
     </nav>
