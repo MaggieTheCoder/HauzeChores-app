@@ -22,7 +22,14 @@ import axios from "axios";
 //     });
 // };
 
-const getHouseByInviteCode = async (inviteCode, setHouseId, email) => {
+const setNewUserDetails = async (
+  inviteCode,
+  setHouseId,
+  email,
+  setUserID,
+  setCode
+) => {
+  setCode(inviteCode);
   const response = await axios.get(
     `http://localhost:4000/houses/invitecode/${inviteCode}`
   );
@@ -31,12 +38,18 @@ const getHouseByInviteCode = async (inviteCode, setHouseId, email) => {
   try {
     console.log(id);
     setHouseId(response.data.id);
-    await axios.patch(`http://localhost:4000/email?email=${email}`, {
+
+    const userData = await axios.get(
+      `http://localhost:4000/query/users/?email=${email}`
+    );
+    const userid = userData.data.id;
+    await axios.patch(`http://localhost:4000/users/${userid}`, {
       houseid: response.data.id,
     });
+    setUserID(userid);
   } catch (error) {
     console.log(error);
   }
 };
 
-export default getHouseByInviteCode;
+export default setNewUserDetails;

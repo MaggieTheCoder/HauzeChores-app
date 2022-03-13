@@ -12,7 +12,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import setUserDetailsOnLogin from "../requests/setUserDetailsOnLogin";
 
-const LoginPage = ({ setUser, setHouseId, setUserId }) => {
+const LoginPage = ({ setUser, setHouseId, setUserId, setCode }) => {
   const [signInDetails, setSignInDetails] = useState();
   const [registerDetails, setRegisterDetails] = useState();
   const [errorMessage, setErrorMessage] = useState();
@@ -35,7 +35,12 @@ const LoginPage = ({ setUser, setHouseId, setUserId }) => {
         signInDetails.password
       );
       console.log(user);
-      setUserDetailsOnLogin(signInDetails.email, setHouseId, setUserId);
+      setUserDetailsOnLogin(
+        signInDetails.email,
+        setHouseId,
+        setUserId,
+        setCode
+      );
       e.target.reset();
     } catch (error) {
       console.log(error);
@@ -124,4 +129,5 @@ LoginPage.propTypes = {
   setUser: propTypes.func.isRequired,
   setHouseId: propTypes.func.isRequired,
   setUserId: propTypes.func.isRequired,
+  setCode: propTypes.func.isRequired,
 };
