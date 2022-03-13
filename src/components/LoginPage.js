@@ -70,6 +70,7 @@ const LoginPage = ({ setUser, setHouseId, setUserId }) => {
       <div className="Login">
         <form onSubmit={signIn} className="Login__login">
           <input
+            className="email__input__box"
             type="email"
             placeholder="email"
             name="email"
@@ -77,6 +78,7 @@ const LoginPage = ({ setUser, setHouseId, setUserId }) => {
             data-testid="login-email"
           />
           <input
+            className="password__input__box"
             type="password"
             placeholder="password"
             name="password"
@@ -84,12 +86,13 @@ const LoginPage = ({ setUser, setHouseId, setUserId }) => {
             data-testid="login-password"
           />
           <button type="submit" className="Login__button">
-            Login
+            LOG IN
           </button>
         </form>
         <hr />
         <form onSubmit={register} className="Login__register">
           <input
+            className="email__input__box"
             type="email"
             placeholder="email"
             name="email"
@@ -97,6 +100,7 @@ const LoginPage = ({ setUser, setHouseId, setUserId }) => {
             data-testid="register-email"
           />
           <input
+            className="password__input__box"
             type="password"
             placeholder="password"
             name="password"
@@ -104,7 +108,7 @@ const LoginPage = ({ setUser, setHouseId, setUserId }) => {
             data-testid="register-password"
           />
           <button type="submit" className="Login__button">
-            Register
+            REGISTER
           </button>
         </form>
         {errorMessage && <p>Error! {errorMessage}</p>}
