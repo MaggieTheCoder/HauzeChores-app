@@ -1,0 +1,18 @@
+.task {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.task__button {
+  background-color: #bf1689;
+  color: white;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.task__name {
+  color: rgb(67, 7, 67);
+}

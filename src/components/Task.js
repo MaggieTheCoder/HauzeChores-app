@@ -2,24 +2,28 @@ import React from "react";
 import propTypes from "prop-types";
 import deleteTaskById from "../requests/deleteTaskById";
 import assignTaskToUser from "../requests/assignTaskToUser";
+import "../styles/Task.css";
 
 const Task = ({ taskname, id, setAddedANewTask, userId }) => {
   return (
-    <div>
+    <div className="task">
       <button
         type="button"
+        className="task__button"
         onClick={() => {
           assignTaskToUser(userId, id, setAddedANewTask);
         }}
       >
-        {taskname}
+        Take it!
       </button>
       <button
         type="button"
         onClick={() => deleteTaskById(id, setAddedANewTask)}
+        className="task__button"
       >
         X
       </button>
+      <p className="task__name">{taskname}</p>
     </div>
   );
 };

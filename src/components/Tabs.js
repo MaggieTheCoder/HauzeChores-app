@@ -61,11 +61,16 @@ const Tabs = ({ houseTasks, setAddedANewTask, userId, userTasks }) => {
       {activeIndex === 2 && (
         <div className="panels">
           <div className={`panel ${checkActive(1, "active")}`}>
-            <p>
-              {userTasks.map((task) => {
-                return <UserTask taskname={task.taskname} key={task.id} />;
-              })}
-            </p>
+            {userTasks.map((task) => {
+              return (
+                <UserTask
+                  taskname={task.taskname}
+                  id={task.id}
+                  key={task.id}
+                  userId={userId}
+                />
+              );
+            })}
           </div>
         </div>
       )}
