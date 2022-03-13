@@ -9,15 +9,21 @@ import {
 } from "unique-names-generator";
 import postNewHouse from "../requests/postNewHouse";
 import setNewUserDetails from "../requests/setNewUserDetails";
+import searchAndJoin from "../requests/searchAndJoinExistingHouse";
 
 const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
   const [name, setName] = useState();
   const [visibleItem, setVisibleItem] = useState(false);
   const [inviteCode, setInviteCode] = useState("");
   const [randomStr, setRandomStr] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleAddHouse = (event) => {
     setName(event.target.value);
+  };
+
+  const handleSearchTerm = (event) => {
+    setSearchTerm(event.target.value);
   };
 
   const handleSubmit = async () => {
@@ -58,8 +64,16 @@ const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
           className="input-invitation__code"
           type="text"
           placeholder="use invitation code"
+          onChange={handleSearchTerm}
         />
-        <button type="button">find and join</button>
+        <button
+          type="button"
+          onClick={() => {
+            searchAndJoin(searchTerm);
+          }}
+        >
+          find and join
+        </button>
       </form>
       <button
         type="button"
