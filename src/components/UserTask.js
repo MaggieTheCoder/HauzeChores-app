@@ -24,6 +24,6 @@ export default UserTask;
 
 UserTask.propTypes = {
   taskname: propTypes.string.isRequired,
-  id: propTypes.string.isRequired,
-  userId: propTypes.string.isRequired,
+  id: propTypes.number.isRequired,
+  userId: propTypes.number.isRequired,
 };

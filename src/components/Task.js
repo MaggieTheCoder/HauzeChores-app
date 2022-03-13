@@ -34,5 +34,5 @@ Task.propTypes = {
   taskname: propTypes.string.isRequired,
   id: propTypes.number.isRequired,
   setAddedANewTask: propTypes.func.isRequired,
-  userId: propTypes.string.isRequired,
+  userId: propTypes.number.isRequired,
 };
