@@ -1,0 +1,66 @@
+.add-house {
+padding-top: 60px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width : 100%;
+  height : 700px;
+  background-color: #99E5FF;
+  border-radius : 90px;
+}
+.Addhouse__house {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.input-house__name {
+    font-family: "Menlo", sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 15px;
+    text-align: center;
+}
+.create_button {
+ font-family: "Menlo", sans-serif;
+  font-size: 25px;
+  margin-bottom: 30px;
+  background-color: #C60982;
+  border-radius: 15px;
+  padding: 5px;
+  color: white;
+}
+.input-invitation__code {
+    font-family: "Menlo", sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 15px;
+    text-align: center;
+}
+.find_button {
+    font-family: "Menlo", sans-serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+    background-color: #C60982;
+    border-radius: 15px;
+    padding: 5px;
+    color: white; 
+}
+.next_button {
+    width: 50%;
+    display: flex;
+    margin-bottom: 30px;
+    font-family: "Menlo", sans-serif;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    background-color: #360866;;
+    border-radius: 15px;
+    padding: 5px;
+    color: white; 
+}
