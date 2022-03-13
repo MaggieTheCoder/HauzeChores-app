@@ -9,6 +9,7 @@ import {
 } from "unique-names-generator";
 import postNewHouse from "../requests/postNewHouse";
 import setNewUserDetails from "../requests/setNewUserDetails";
+import "../styles/AddHouse.css";
 
 const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
   const [name, setName] = useState();
@@ -41,15 +42,19 @@ const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
   return (
     <div className="add-house">
       {houseId}
-      <form onSubmit={handleAddHouse}>
+      <form onSubmit={handleAddHouse} className="Addhouse__house">
         <input
           className="input-house__name"
           type="text"
           placeholder="type house name"
           onChange={handleAddHouse}
         />
-        <button type="button" onClick={() => handleSubmit()}>
-          create
+        <button
+          className="create_button"
+          type="button"
+          onClick={() => handleSubmit()}
+        >
+          CREATE
         </button>
         {visibleItem && <p>Your unique code is `{randomStr}`</p>}
 
@@ -59,15 +64,18 @@ const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
           type="text"
           placeholder="use invitation code"
         />
-        <button type="button">find and join</button>
+        <button className="find_button" type="button">
+          FIND and JOIN
+        </button>
       </form>
       <button
+        className="next_button"
         type="button"
         onClick={() => {
           handleHouseIDChange();
         }}
       >
-        Next
+        NEXT
       </button>
     </div>
   );

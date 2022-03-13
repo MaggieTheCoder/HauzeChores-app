@@ -1,9 +1,20 @@
 .navbar {
-  font-size: 10px;
-  background-color: #bf1689;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.navbar button {
+.logout_button {
+  font-family: "Menlo", sans-serif;
   font-size: 10px;
-}               
+  margin-bottom: 10px;
+  background-color: #C60982;
+  flex-direction: row;
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
+}  
+.user {
+  font-family: "Menlo", sans-serif;
+  flex-direction: row
+}             
