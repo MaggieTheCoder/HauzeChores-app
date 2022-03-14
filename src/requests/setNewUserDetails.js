@@ -26,6 +26,13 @@ const setNewUserDetails = async (
       houseid: response.data.id,
     });
     setUserID(userid);
+
+    await axios.post("http://localhost:4000/scoreboard", {
+      score: 0,
+      username: email,
+      userID: userid,
+      houseID: response.data.id,
+    });
   } catch (error) {
     console.log(error);
   }
