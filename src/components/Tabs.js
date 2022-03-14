@@ -69,6 +69,7 @@ const Tabs = ({ houseTasks, setAddedANewTask, userId, userTasks }) => {
                   id={task.id}
                   key={task.id}
                   userId={userId}
+                  setAddedANewTask={setAddedANewTask}
                 />
               );
             })}
