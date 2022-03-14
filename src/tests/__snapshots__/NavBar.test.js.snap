@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar component renders properly 1`] = `
+<DocumentFragment>
+  <nav
+    class="navbar"
+  >
+    <div>
+      <header
+        class="header"
+      >
+        <div
+          class="header__banner"
+        >
+          banners
+        </div>
+        <h1
+          class="header__h1"
+        >
+          HOUZE
+        </h1>
+        <h3
+          class="header__h3"
+        >
+          Just get it done!
+        </h3>
+      </header>
+      <p
+        class="user"
+      >
+        Logged in as test@test.com
+      </p>
+      <button
+        class="logout_button"
+        type="button"
+      >
+        LOG OUT
+      </button>
+      <p>
+        test-code
+      </p>
+      <footer
+        class="footer"
+      >
+        <p
+          class="footer-text"
+        >
+          Footer
+        </p>
+        <img
+          alt="Houze logo"
+          class="app-logo"
+          src="Homepage-logo-purple.svg"
+        />
+      </footer>
+    </div>
+  </nav>
+</DocumentFragment>
+`;

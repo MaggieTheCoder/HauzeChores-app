@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard component Component renders as expected 1`] = `
+<DocumentFragment>
+  <div
+    class="dashboard"
+  >
+    <p>
+      user: 1
+    </p>
+    <p>
+      house: 1
+    </p>
+    <p>
+      new task: 1
+    </p>
+    <div
+      class="add-task"
+    >
+      <form
+        class="task__list"
+      >
+        <label
+          for="type"
+        >
+          Task
+          <select
+            id="type"
+            name="type"
+          >
+            <option
+              value="Empty Dishwasher"
+            >
+              Empty Dishwasher
+            </option>
+            <option
+              value="Hoover living room"
+            >
+              Hoover living room
+            </option>
+            <option
+              value="Water the plants"
+            >
+              Water the plants
+            </option>
+            <option
+              value="custom"
+            >
+              Add your own
+            </option>
+          </select>
+        </label>
+        <button
+          type="button"
+        >
+          Add
+        </button>
+      </form>
+    </div>
+    <div
+      class="add-team"
+    >
+      <form>
+        Invite
+        <input
+          class="input__box"
+          placeholder="email"
+          type="text"
+        />
+        <button
+          type="button"
+        >
+          Send
+        </button>
+      </form>
+    </div>
+    <div
+      class="tabs"
+    >
+      <button
+        class="tab active"
+        type="button"
+      >
+        All Tasks 
+      </button>
+      <button
+        class="tab "
+        type="button"
+      >
+        My Tasks 
+      </button>
+      <button
+        class="tab "
+        type="button"
+      >
+        Leaderboard 
+      </button>
+    </div>
+    <div
+      class="panels"
+    >
+      <div
+        class="panel active"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
