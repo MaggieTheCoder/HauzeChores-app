@@ -5,7 +5,7 @@ import "../styles/Tabs.css";
 import Task from "./Task";
 import UserTask from "./UserTask";
 
-const Tabs = ({ houseTasks, setAddedANewTask, userId, userTasks }) => {
+const Tabs = ({ houseTasks, setAddedANewTask, userId, userTasks, scores }) => {
   const [activeIndex, setActiveIndex] = useState(1);
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -69,6 +69,7 @@ const Tabs = ({ houseTasks, setAddedANewTask, userId, userTasks }) => {
                   id={task.id}
                   key={task.id}
                   userId={userId}
+                  setAddedANewTask={setAddedANewTask}
                 />
               );
             })}
@@ -79,12 +80,13 @@ const Tabs = ({ houseTasks, setAddedANewTask, userId, userTasks }) => {
       {activeIndex === 3 && (
         <div className="panels">
           <div className={`panel ${checkActive(1, "active")}`}>
-            <p>
-              {" "}
-              Tab 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Aenean erat ligula, feugiat at felis vitae, porttitor lacinia
-              quam.
-            </p>
+            {scores.map((score) => {
+              return (
+                <div>
+                  Name: {score.username} score: {score.score}{" "}
+                </div>
+              );
+            })}
           </div>
         </div>
       )}
@@ -97,6 +99,7 @@ export default Tabs;
 Tabs.propTypes = {
   houseTasks: propTypes.instanceOf(Array).isRequired,
   userTasks: propTypes.instanceOf(Array).isRequired,
+  scores: propTypes.instanceOf(Array).isRequired,
   setAddedANewTask: propTypes.func.isRequired,
   userId: propTypes.string.isRequired,
 };
