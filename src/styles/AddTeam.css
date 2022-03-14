@@ -4,7 +4,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: rgb(178, 225, 239);
+  background-color: #99E5FF;
 }
 .add-team input {
   font-family: "Menlo", sans-serif;
@@ -17,6 +17,6 @@
   font-size: 15px;
   padding-right: 5px;
   padding-left: 5px;
-  background-color: #bf1689;
+  background-color: #99E5FF;
   color: white;
 }

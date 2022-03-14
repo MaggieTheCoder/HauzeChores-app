@@ -4,7 +4,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: rgb(178, 225, 239);
+  background-color: #99E5FF;
 }
 
 .add-task button {
@@ -12,12 +12,12 @@
   font-size: 15px;
   padding-right: 5px;
   padding-left: 5px;
-  background-color: #bf1689;
+  background-color: #C60982;
   color: white;
 }
 
 .custom-task {
-  background-color: rgb(178, 225, 239);
+  background-color: #99E5FF;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -28,7 +28,7 @@
   font-size: 15px;
   padding-right: 5px;
   padding-left: 5px;
-  background-color: #bf1689;
+  background-color: #C60982;
   color: white;
 }
 

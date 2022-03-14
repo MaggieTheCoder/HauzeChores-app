@@ -53,13 +53,12 @@ padding-top: 60px;
 }
 .next_button {
     width: 50%;
-    display: flex;
     margin-bottom: 30px;
     font-family: "Menlo", sans-serif;
     text-align: center;
     font-size: 25px;
     margin-bottom: 10px;
-    background-color: #360866;;
+    background-color: #360866;
     border-radius: 15px;
     padding: 5px;
     color: white; 

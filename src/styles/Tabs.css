@@ -6,17 +6,17 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: lightsteelblue;
+  background-color: #99E5FF;;
   padding: 2em 0;
   border: none;
 }
 
 .tab:not(:last-child) {
-  border-right: 1px solid steelblue;
+  border-right: 1px solid #C60982;
 }
 
 .tab.active {
-  background: white;
+  background:#360866;
   font-weight: bold;
 }
 

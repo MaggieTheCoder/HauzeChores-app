@@ -10,14 +10,16 @@ const NavBar = ({ user, logOut, code }) => {
       {user && (
         <div>
           <Header />
-          <p className="user">Logged in as {user.email}</p>
-          <button
-            className="logout_button"
-            type="button"
-            onClick={() => logOut()}
-          >
-            LOG OUT
-          </button>
+          <div className="user__grid">
+            <p className="user">Logged in as {user.email}</p>
+            <button
+              className="logout_button"
+              type="button"
+              onClick={() => logOut()}
+            >
+              LOG OUT
+            </button>
+          </div>
           {code && <p>{code}</p>}
           <Footer />
         </div>

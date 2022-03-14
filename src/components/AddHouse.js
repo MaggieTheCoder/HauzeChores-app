@@ -41,7 +41,6 @@ const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
   };
   return (
     <div className="add-house">
-      {houseId}
       <form onSubmit={handleAddHouse} className="Addhouse__house">
         <input
           className="input-house__name"

@@ -1,21 +1,28 @@
 .navbar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content:space-between;
+  padding-left: 30px;
+  padding-right: 30px;
 }
-
+.user__grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+}
 .logout_button {
   font-family: "Menlo", sans-serif;
-  font-size: 10px;
-  margin-bottom: 10px;
+  font-size: 25px;
   background-color: #C60982;
-  flex-direction: row;
-  border-radius: 10px;
-  padding: 5px;
+  padding: 0px 70px 0px 70px;
+  border-radius: 15px;
   color: white;
 }  
 .user {
   font-family: "Menlo", sans-serif;
-  flex-direction: row
+  font-size: 30px;
+  color: #360866;
+  margin: 6px 60px 6px 60px;
 }             
 
