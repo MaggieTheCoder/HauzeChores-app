@@ -9,16 +9,19 @@ import Tabs from "./Tabs";
 import "../styles/Dashboard.css";
 import getAllHouseTasks from "../requests/getAllHouseTasks";
 import getAllUserTasks from "../requests/getAllUserTasks";
+import getHouseScores from "../requests/getHouseScores";
 
 const DashBoard = ({ houseId, userId, setUserId }) => {
   const [houseTasks, setHouseTasks] = useState([]);
   const [userTasks, setUserTasks] = useState([]);
   const [addedANewTask, setAddedANewTask] = useState(1);
+  const [scores, setScores] = useState([]);
 
   useEffect(() => {
-    console.log("page renderig", addedANewTask);
+    console.log("page rendering", addedANewTask);
     getAllHouseTasks(houseId, setHouseTasks, userId, setUserTasks);
     getAllUserTasks(userId, setUserTasks);
+    getHouseScores(houseId, setScores);
   }, [addedANewTask]);
 
   return (
@@ -38,6 +41,7 @@ const DashBoard = ({ houseId, userId, setUserId }) => {
         userTasks={userTasks}
         setAddedANewTask={setAddedANewTask}
         userId={userId}
+        scores={scores}
       />
     </div>
   );
