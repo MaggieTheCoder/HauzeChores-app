@@ -5,7 +5,7 @@ import "../styles/AddTask.css";
 import postNewTask from "../requests/postNewTask";
 
 const AddTask = ({ houseId, userId, setAddedANewTask }) => {
-  const [task, setTask] = useState();
+  const [task, setTask] = useState("Empty Dishwasher");
   const [custom, setCustom] = useState(false);
 
   const handleAddTask = async (event) => {

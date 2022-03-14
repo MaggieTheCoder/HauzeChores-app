@@ -2,6 +2,25 @@
 
 exports[`LoginPage component  1`] = `
 <DocumentFragment>
+  <header
+    class="header"
+  >
+    <div
+      class="header__banner"
+    >
+      banners
+    </div>
+    <h1
+      class="header__h1"
+    >
+      HOUZE
+    </h1>
+    <h3
+      class="header__h3"
+    >
+      Just get it done!
+    </h3>
+  </header>
   <div
     class="Login"
   >
@@ -9,12 +28,14 @@ exports[`LoginPage component  1`] = `
       class="Login__login"
     >
       <input
+        class="email__input__box"
         data-testid="login-email"
         name="email"
         placeholder="email"
         type="email"
       />
       <input
+        class="password__input__box"
         data-testid="login-password"
         name="password"
         placeholder="password"
@@ -24,7 +45,7 @@ exports[`LoginPage component  1`] = `
         class="Login__button"
         type="submit"
       >
-        Login
+        LOG IN
       </button>
     </form>
     <hr />
@@ -32,12 +53,14 @@ exports[`LoginPage component  1`] = `
       class="Login__register"
     >
       <input
+        class="email__input__box"
         data-testid="register-email"
         name="email"
         placeholder="email"
         type="email"
       />
       <input
+        class="password__input__box"
         data-testid="register-password"
         name="password"
         placeholder="password"
@@ -47,9 +70,23 @@ exports[`LoginPage component  1`] = `
         class="Login__button"
         type="submit"
       >
-        Register
+        REGISTER
       </button>
     </form>
   </div>
+  <footer
+    class="footer"
+  >
+    <p
+      class="footer-text"
+    >
+      Footer
+    </p>
+    <img
+      alt="Houze logo"
+      class="app-logo"
+      src="Homepage-logo-purple.svg"
+    />
+  </footer>
 </DocumentFragment>
 `;

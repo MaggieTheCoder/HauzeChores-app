@@ -11,7 +11,7 @@ exports[`AddTask component renders correctly 1`] = `
       <label
         for="type"
       >
-        Type
+        Task
         <select
           id="type"
           name="type"
@@ -31,12 +31,17 @@ exports[`AddTask component renders correctly 1`] = `
           >
             Water the plants
           </option>
+          <option
+            value="custom"
+          >
+            Add your own
+          </option>
         </select>
       </label>
       <button
-        type="submit"
+        type="button"
       >
-        Add Task
+        Add
       </button>
     </form>
   </div>

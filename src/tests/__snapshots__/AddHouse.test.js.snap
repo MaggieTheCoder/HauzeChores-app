@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add House component It renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="add-house"
+  >
+    2
+    <form
+      class="Addhouse__house"
+    >
+      <input
+        class="input-house__name"
+        placeholder="type house name"
+        type="text"
+      />
+      <button
+        class="create_button"
+        type="button"
+      >
+        CREATE
+      </button>
+      <br />
+      <input
+        class="input-invitation__code"
+        placeholder="use invitation code"
+        type="text"
+      />
+      <button
+        class="find_button"
+        type="button"
+      >
+        FIND AND JOIN
+      </button>
+    </form>
+    <button
+      class="next_button"
+      type="button"
+    >
+      NEXT
+    </button>
+  </div>
+</DocumentFragment>
+`;

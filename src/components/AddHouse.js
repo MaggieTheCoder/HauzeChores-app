@@ -56,9 +56,9 @@ const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
           onChange={handleAddHouse}
         />
         <button
-          className="create_button"
           type="button"
           onClick={() => handleSubmit()}
+          className="create_button"
         >
           CREATE
         </button>
@@ -71,18 +71,14 @@ const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
           placeholder="use invitation code"
           onChange={handleSearchTerm}
         />
-<<<<<<< HEAD
         <button
           type="button"
+          className="find_button"
           onClick={() => {
-            searchAndJoin(searchTerm);
+            searchAndJoin(searchTerm, setInviteCode);
           }}
         >
-          find and join
-=======
-        <button className="find_button" type="button">
-          FIND and JOIN
->>>>>>> main
+          FIND AND JOIN
         </button>
       </form>
       <button

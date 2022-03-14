@@ -1,27 +1,6 @@
 /* eslint-disable no-unused-vars */
 import axios from "axios";
 
-// const getHouseByInviteCode = (inviteCode, setHouseId, email, houseId) => {
-//   axios
-//     .get(`http://localhost:4000/houses/invitecode/${inviteCode}`)
-//     .then((res) => {
-//       console.log(res);
-//       setHouseId(res.data.id);
-//     })
-//     .then(
-//       axios
-//         .patch(`http://localhost:4000/users/email/${email}`, {
-//           houseid: houseId,
-//         })
-//         .then((res) => {
-//           console.log(res);
-//         })
-//     )
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// };
-
 const setNewUserDetails = async (
   inviteCode,
   setHouseId,
