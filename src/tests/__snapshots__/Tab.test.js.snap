@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tab component it renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="tabs"
+  >
+    <button
+      class="tab active"
+      type="button"
+    >
+      All Tasks 
+    </button>
+    <button
+      class="tab "
+      type="button"
+    >
+      My Tasks 
+    </button>
+    <button
+      class="tab "
+      type="button"
+    >
+      Leaderboard 
+    </button>
+  </div>
+  <div
+    class="panels"
+  >
+    <div
+      class="panel active"
+    />
+  </div>
+</DocumentFragment>
+`;

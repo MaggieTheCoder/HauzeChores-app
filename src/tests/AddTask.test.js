@@ -9,7 +9,7 @@ describe("AddTask component", () => {
   });
   it("button renders with correct text", () => {
     render(<AddTask />);
-    const buttonElement = screen.getByText("Add Task");
+    const buttonElement = screen.getByText("Add");
     expect(buttonElement).toBeInTheDocument();
   });
 });

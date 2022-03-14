@@ -5,175 +5,95 @@ exports[`renders learn react link 1`] = `
   <div
     class="App"
   >
-    <nav>
+    <nav
+      class="navbar"
+    >
       <div>
-        <p>
+        <header
+          class="header"
+        >
+          <div
+            class="header__banner"
+          >
+            banners
+          </div>
+          <h1
+            class="header__h1"
+          >
+            HOUZE
+          </h1>
+          <h3
+            class="header__h3"
+          >
+            Just get it done!
+          </h3>
+        </header>
+        <p
+          class="user"
+        >
           Logged in as 
         </p>
         <button
+          class="logout_button"
           type="button"
         >
-          Log out
+          LOG OUT
         </button>
+        <footer
+          class="footer"
+        >
+          <p
+            class="footer-text"
+          >
+            Footer
+          </p>
+          <img
+            alt="Houze logo"
+            class="app-logo"
+            src="Homepage-logo-purple.svg"
+          />
+        </footer>
       </div>
     </nav>
-    <header
-      class="App-header"
-    >
-      <h1>
-        Houze
-      </h1>
-      <h3>
-        Just get it done!
-      </h3>
-    </header>
     <div
-      class="Login"
+      class="add-house"
     >
+      0
       <form
-        class="Login__login"
+        class="Addhouse__house"
       >
         <input
-          data-testid="login-email"
-          name="email"
-          placeholder="email"
-          type="email"
-        />
-        <input
-          data-testid="login-password"
-          name="password"
-          placeholder="password"
-          type="password"
+          class="input-house__name"
+          placeholder="type house name"
+          type="text"
         />
         <button
-          class="Login__button"
-          type="submit"
+          class="create_button"
+          type="button"
         >
-          Login
+          CREATE
         </button>
-      </form>
-      <hr />
-      <form
-        class="Login__register"
-      >
+        <br />
         <input
-          data-testid="register-email"
-          name="email"
-          placeholder="email"
-          type="email"
-        />
-        <input
-          data-testid="register-password"
-          name="password"
-          placeholder="password"
-          type="password"
+          class="input-invitation__code"
+          placeholder="use invitation code"
+          type="text"
         />
         <button
-          class="Login__button"
-          type="submit"
+          class="find_button"
+          type="button"
         >
-          Register
+          FIND AND JOIN
         </button>
       </form>
-    </div>
-    <div>
-      <div
-        class="add-task"
-      >
-        <form
-          class="task__list"
-        >
-          <label
-            for="type"
-          >
-            Type
-            <select
-              id="type"
-              name="type"
-            >
-              <option
-                value="Empty Dishwasher"
-              >
-                Empty Dishwasher
-              </option>
-              <option
-                value="Hoover living room"
-              >
-                Hoover living room
-              </option>
-              <option
-                value="Water the plants"
-              >
-                Water the plants
-              </option>
-            </select>
-          </label>
-          <button
-            type="submit"
-          >
-            Add Task
-          </button>
-        </form>
-      </div>
-      <div
-        class="add__team"
-      >
-        <form>
-          <h3>
-             Add team mate
-          </h3>
-          <input
-            class="input__box"
-            placeholder="type name"
-            type="text"
-          />
-          <button
-            type="button"
-          >
-            Add team mate
-          </button>
-        </form>
-      </div>
-      <div>
-        <h1>
-          leader board
-        </h1>
-      </div>
-    </div>
-    1
-    <div
-      class="tabs"
-    >
       <button
-        class="tab active"
+        class="next_button"
         type="button"
       >
-        All Tasks 
-      </button>
-      <button
-        class="tab "
-        type="button"
-      >
-        My Tasks 
-      </button>
-      <button
-        class="tab "
-        type="button"
-      >
-        My Streak 
+        NEXT
       </button>
     </div>
-    <div
-      class="panels"
-    >
-      <div
-        class="panel active"
-      >
-        <p>
-           Tab 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean erat ligula, feugiat at felis vitae, porttitor lacinia quam.
-        </p>
-      </div>
-    </div>
+    0
   </div>
 </DocumentFragment>
 `;

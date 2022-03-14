@@ -14,7 +14,7 @@ describe("LoginPage component", () => {
 
   test("Login form renders correctly", () => {
     render(<LoginPage setUser={validProps.setUser} />);
-    const loginButton = screen.getByText("Login");
+    const loginButton = screen.getByText("LOG IN");
     const loginEmailInput = screen.getByTestId("login-email");
     const loginPasswordInput = screen.getByTestId("login-password");
 
@@ -25,7 +25,7 @@ describe("LoginPage component", () => {
 
   test("Register form renders correctly", () => {
     render(<LoginPage setUser={validProps.setUser} />);
-    const registerButton = screen.getByText("Register");
+    const registerButton = screen.getByText("REGISTER");
     const registerEmailInput = screen.getByTestId("register-email");
     const registerPasswordInput = screen.getByTestId("register-password");
 
