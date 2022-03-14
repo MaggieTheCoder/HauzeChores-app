@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders app correctly 1`] = `
+<DocumentFragment>
+  <header
+    class="header"
+  >
+    <div
+      class="header__banner"
+    >
+      banners
+    </div>
+    <h1
+      class="header__h1"
+    >
+      HOUZE
+    </h1>
+    <h3
+      class="header__h3"
+    >
+      Just get it done!
+    </h3>
+  </header>
+</DocumentFragment>
+`;

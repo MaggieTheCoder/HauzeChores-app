@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Task component correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="task"
+  >
+    <button
+      class="task__button"
+      type="button"
+    >
+      Take it!
+    </button>
+    <button
+      class="task__button"
+      type="button"
+    >
+      X
+    </button>
+    <p
+      class="task__name"
+    />
+  </div>
+</DocumentFragment>
+`;

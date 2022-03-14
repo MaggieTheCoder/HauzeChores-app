@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders footer correctly 1`] = `
+<DocumentFragment>
+  <footer
+    class="footer"
+  >
+    <p
+      class="footer-text"
+    >
+      Footer
+    </p>
+    <img
+      alt="Houze logo"
+      class="app-logo"
+      src="Homepage-logo-purple.svg"
+    />
+  </footer>
+</DocumentFragment>
+`;
