@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import propTypes from "prop-types";
 // import AddHouse from "./AddHouse";
 import AddTask from "./AddTask";
-import AddTeam from "./AddTeam";
 
 import Tabs from "./Tabs";
 import "../styles/Dashboard.css";
@@ -32,7 +31,6 @@ const DashBoard = ({ houseId, userId, setUserId }) => {
         userId={userId}
         setAddedANewTask={setAddedANewTask}
       />
-      <AddTeam />
       <Tabs
         houseTasks={houseTasks}
         userTasks={userTasks}

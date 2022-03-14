@@ -16,6 +16,7 @@ const Task = ({ taskname, id, setAddedANewTask, userId }) => {
       >
         Take it!
       </button>
+      <p className="task__name">{taskname}</p>
       <button
         type="button"
         onClick={() => deleteTaskById(id, setAddedANewTask)}
@@ -23,7 +24,6 @@ const Task = ({ taskname, id, setAddedANewTask, userId }) => {
       >
         X
       </button>
-      <p className="task__name">{taskname}</p>
     </div>
   );
 };

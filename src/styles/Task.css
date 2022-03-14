@@ -1,18 +1,25 @@
 .task {
   display: flex;
   flex-direction: row;
-  margin-top: 30px;
+  justify-content: space-between;
+  margin: 10px;
   font-size: 20px;
   margin-left: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+  scroll-behavior: auto;
 }
 
 .task__button {
-  background-color:  #C60982;
+  font-family: "Menlo", sans-serif;
+  font-size: 25px;
+  background-color: #C60982;
+  padding: 3px 50px 3px 50px;
+  border-radius: 15px;
   color: white;
-  margin-right: 10px;
-  font-size: 20px;
 }
 
 .task__name {
   color: #C60982;
+  font-size: 25px;
 }

@@ -34,12 +34,17 @@ const AddTask = ({ houseId, userId, setAddedANewTask }) => {
           <label htmlFor="type">
             Task
             <select
+              className="task__dropdown"
               id="type"
               name="type"
               value={task}
               onChange={handleFieldChange}
             >
               <option value="Empty Dishwasher">Empty Dishwasher</option>
+              <option value="Fill Dishwasher">Fill Dishwasher</option>
+              <option value="Take bins out">Take bins out</option>
+              <option value="Sort laundry">Sort laundry</option>
+              <option value="Mop kitchen floor">Mop kitchen floor</option>
               <option value="Hoover living room">Hoover living room</option>
               <option value="Water the plants">Water the plants</option>
               <option value="custom">Add your own</option>
@@ -48,6 +53,7 @@ const AddTask = ({ houseId, userId, setAddedANewTask }) => {
 
           {!custom && (
             <button
+              className="add_task_button"
               type="button"
               onClick={() => postNewTask(task, houseId, setAddedANewTask)}
             >
@@ -61,6 +67,7 @@ const AddTask = ({ houseId, userId, setAddedANewTask }) => {
           <form onSubmit={handleAddTask}>
             <input type="text" onChange={handleInput} placeholder="add task" />
             <button
+              className="add_task_button"
               type="button"
               onClick={() => postNewTask(task, houseId, setAddedANewTask)}
             >

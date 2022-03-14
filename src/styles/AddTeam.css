@@ -14,9 +14,9 @@
 }
 .add-team button {
   font-family: "Menlo", sans-serif;
-  font-size: 15px;
-  padding-right: 5px;
-  padding-left: 5px;
-  background-color: #99E5FF;
+  font-size: 25px;
+  background-color: #C60982;
+  padding: 0px 50px 0px 50px;
+  border-radius: 15px;
   color: white;
 }
