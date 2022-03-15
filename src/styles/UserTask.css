@@ -1,5 +1,5 @@
 .usertask-container {
-  background-color: #C60982;
+  background-color: #c60982;
   height: 50px;
   padding-top: 5px;
   padding-bottom: 30px;
@@ -27,4 +27,19 @@
 .usertask__name {
   color: white;
   font-size: 25px;
+}
+
+@media screen and (max-width: 390px) {
+  .usertask__button {
+    font-size: 20px;
+    padding: 1px 5px 1px 5px;
+    margin-right: 40px;
+  }
+  .usertask__name {
+    font-size: 15px;
+  }
+  .usertask {
+    justify-content: flex-start;
+    padding: 0;
+  }
 }
