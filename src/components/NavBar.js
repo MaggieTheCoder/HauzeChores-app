@@ -2,7 +2,7 @@ import React from "react";
 import propTypes from "prop-types";
 import "../styles/NavBar.css";
 import Header from "./Header";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 
 const NavBar = ({ user, logOut, code }) => {
   return (
@@ -20,8 +20,8 @@ const NavBar = ({ user, logOut, code }) => {
               LOG OUT
             </button>
           </div>
-          {code && <p>{code}</p>}
-          <Footer />
+          {code && <p className="invitation_code"> Invitation code: {code}</p>}
+          {/* <Footer /> */}
         </div>
       )}
     </nav>

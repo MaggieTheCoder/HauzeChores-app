@@ -1,51 +1,63 @@
 .tabs {
   display: flex;
-  scroll-behavior: auto;
+  background-color: #99E5FF;
 }
 
 .tab {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #99E5FF;
   border-radius : 49px 49px 0px 0px;
   padding: 2em 0;
   border: none;
-  scroll-behavior: auto;
+  font-family: "Menlo", sans-serif;
+  font-size: 25px;
+  border-color: black;
 }
 
-.tab:not(:last-child) {
+/* .tab:not(:last-child) {
   border-right: 1px solid #C60982;
-}
+  
+} */
 
 .tab.active_1 {
   background:#360866;
   font-weight: bold;
+  color:white;
+  font-family: "Menlo", sans-serif;
+  font-size: 25px;
+
+
 }
 .tab.active_2 {
   background:#C60982;
   font-weight: bold;
+  font-family: "Menlo", sans-serif;
+  font-size: 25px;
 }
 .tab.active_3 {
   background:white;
   font-weight: bold;
+  font-family: "Menlo", sans-serif;
+  font-size: 25px;
 }
 
 .tab-content__panel {
   display: none;
-  background-color: #eaeaea;
-  padding: 10px;
-  scroll-behavior: auto;
+  background-color: white;
 }
 
 .tab-content__panel:active {
   display: block;
   scroll-behavior: auto;
+  border-color: black;
 }
-.alltasks-logo {
-  flex-direction: column;
-  height: 10%;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  margin-top: 4px
+.leaderboard-panel {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  color: #360866;
+  font-weight: bold;
+  font-family: "Menlo", sans-serif;
+  font-size: 30px;
 }

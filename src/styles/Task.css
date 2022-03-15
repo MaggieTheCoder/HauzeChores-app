@@ -1,20 +1,29 @@
+.task-container {
+  background-color: #360866;
+  height: 50px;
+  padding-top: 5px;
+  padding-bottom: 30px;
+
+}
+
 .task {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 10px;
   font-size: 20px;
   margin-left: 10px;
   padding-left: 100px;
   padding-right: 100px;
-  scroll-behavior: auto;
-}
 
+}
+.usertask {
+  background-color: #C60982;;
+}
 .task__button {
   font-family: "Menlo", sans-serif;
   font-size: 25px;
   background-color: #C60982;
-  padding: 3px 50px 3px 50px;
+  padding: 3px 20px 3px 20px;
   border-radius: 15px;
   color: white;
 }

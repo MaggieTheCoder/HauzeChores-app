@@ -5,7 +5,7 @@ import "../styles/AddTask.css";
 import postNewTask from "../requests/postNewTask";
 
 const AddTask = ({ houseId, userId, setAddedANewTask }) => {
-  const [task, setTask] = useState();
+  const [task, setTask] = useState("Empty Dishwasher");
   const [custom, setCustom] = useState(false);
 
   const handleAddTask = async (event) => {
@@ -32,7 +32,7 @@ const AddTask = ({ houseId, userId, setAddedANewTask }) => {
       <div className="add-task">
         <form className="task__list">
           <label htmlFor="type">
-            Task
+            Select task:
             <select
               className="task__dropdown"
               id="type"
@@ -64,10 +64,15 @@ const AddTask = ({ houseId, userId, setAddedANewTask }) => {
       </div>
       {custom && (
         <div className="custom-task">
-          <form onSubmit={handleAddTask}>
-            <input type="text" onChange={handleInput} placeholder="add task" />
+          <form className="custom-task-input" onSubmit={handleAddTask}>
+            <input
+              className="custom-task-input"
+              type="text"
+              onChange={handleInput}
+              placeholder="add task"
+            />
             <button
-              className="add_task_button"
+              className="add_task_button_custom"
               type="button"
               onClick={() => postNewTask(task, houseId, setAddedANewTask)}
             >

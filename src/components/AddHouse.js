@@ -9,16 +9,23 @@ import {
 } from "unique-names-generator";
 import postNewHouse from "../requests/postNewHouse";
 import setNewUserDetails from "../requests/setNewUserDetails";
+import searchAndJoin from "../requests/searchAndJoinExistingHouse";
 import "../styles/AddHouse.css";
+import Footer from "./Footer";
 
 const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
   const [name, setName] = useState();
   const [visibleItem, setVisibleItem] = useState(false);
   const [inviteCode, setInviteCode] = useState("");
   const [randomStr, setRandomStr] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleAddHouse = (event) => {
     setName(event.target.value);
+  };
+
+  const handleSearchTerm = (event) => {
+    setSearchTerm(event.target.value);
   };
 
   const handleSubmit = async () => {
@@ -49,9 +56,9 @@ const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
           onChange={handleAddHouse}
         />
         <button
-          className="create_button"
           type="button"
           onClick={() => handleSubmit()}
+          className="create_button"
         >
           CREATE
         </button>
@@ -62,9 +69,16 @@ const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
           className="input-invitation__code"
           type="text"
           placeholder="use invitation code"
+          onChange={handleSearchTerm}
         />
-        <button className="find_button" type="button">
-          FIND and JOIN
+        <button
+          type="button"
+          className="find_button"
+          onClick={() => {
+            searchAndJoin(searchTerm, setInviteCode);
+          }}
+        >
+          FIND AND JOIN
         </button>
       </form>
       <button
@@ -76,6 +90,7 @@ const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
       >
         NEXT
       </button>
+      <Footer />
     </div>
   );
 };

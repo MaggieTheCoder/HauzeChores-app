@@ -1,25 +1,30 @@
+.usertask-container {
+  background-color: #C60982;
+  height: 50px;
+  padding-top: 5px;
+  padding-bottom: 30px;
+}
+
 .usertask {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 10px;
   font-size: 20px;
   margin-left: 10px;
   padding-left: 100px;
   padding-right: 100px;
-  scroll-behavior: auto;
 }
 
 .usertask__button {
   font-family: "Menlo", sans-serif;
   font-size: 25px;
-  background-color: #C60982;
+  background-color: #360866;
   padding: 3px 50px 3px 50px;
   border-radius: 15px;
   color: white;
 }
 
 .usertask__name {
-  color: #C60982;
+  color: white;
   font-size: 25px;
 }

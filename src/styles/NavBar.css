@@ -4,12 +4,12 @@
   justify-content:space-between;
   padding-left: 30px;
   padding-right: 30px;
+  padding-bottom: 20px;
 }
 .user__grid {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 10px;
 }
 .logout_button {
   font-family: "Menlo", sans-serif;
@@ -17,12 +17,21 @@
   background-color: #C60982;
   padding: 0px 70px 0px 70px;
   border-radius: 15px;
+  height: 45px;
   color: white;
 }  
 .user {
   font-family: "Menlo", sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   color: #360866;
-  margin: 6px 60px 6px 60px;
-}             
+  padding-left: 30px;
+}     
+.invitation_code {
+  font-family: "Menlo", sans-serif;
+  font-size: 20px;
+  color: #360866;
+  margin: 10px;
+  padding-right: 30px;
+  padding-left: 20px;
+}        
 
