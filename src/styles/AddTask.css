@@ -63,15 +63,16 @@ label {
   padding: 0px 90px 0px 20px;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 460px) {
   label {
     font-size: 15px;
   }
   .add_task_button {
     font-size: 20px;
-    padding: 0 10px 0 10px;
+    padding: 1px;
   }
   .task__dropdown {
     font-size: 15px;
+    padding: 0;
   }
 }
