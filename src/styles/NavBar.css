@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 20px;
@@ -14,18 +14,18 @@
 .logout_button {
   font-family: "Menlo", sans-serif;
   font-size: 25px;
-  background-color: #C60982;
+  background-color: #c60982;
   padding: 0px 70px 0px 70px;
   border-radius: 15px;
   height: 45px;
   color: white;
-}  
+}
 .user {
   font-family: "Menlo", sans-serif;
   font-size: 25px;
   color: #360866;
   padding-left: 30px;
-}     
+}
 .invitation_code {
   font-family: "Menlo", sans-serif;
   font-size: 20px;
@@ -33,5 +33,17 @@
   margin: 10px;
   padding-right: 30px;
   padding-left: 20px;
-}        
+}
 
+@media screen and (max-width: 390px) {
+  .user {
+    font-size: 15px;
+  }
+  .logout_button {
+    font-size: 15px;
+    padding: 0px 10px 0px 10px;
+  }
+  .invitation_code {
+    font-size: 15px;
+  }
+}
