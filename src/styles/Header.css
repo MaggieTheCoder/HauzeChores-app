@@ -37,7 +37,7 @@
   -webkit-border-radius: 0px 0px 106px 106px;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 460px) {
   .header h1 {
     font-size: 60px;
   }
