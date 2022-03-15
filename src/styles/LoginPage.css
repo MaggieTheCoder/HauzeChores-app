@@ -1,5 +1,7 @@
+
+
 .Login {
-  padding-top: 60px;
+  padding-top:100px;
   padding-bottom: 15px;
   display: flex;
   flex-direction: column;
@@ -18,7 +20,7 @@
 }
 
 .Login__register {
-  width: 55%;
+  width: 50%;
   display: flex;
   flex-direction: column;
 }

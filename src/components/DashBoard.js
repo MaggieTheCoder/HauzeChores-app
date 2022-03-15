@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import propTypes from "prop-types";
 // import AddHouse from "./AddHouse";
 import AddTask from "./AddTask";
-import AddTeam from "./AddTeam";
 
 import Tabs from "./Tabs";
 import "../styles/Dashboard.css";
@@ -26,16 +25,15 @@ const DashBoard = ({ houseId, userId, setUserId }) => {
 
   return (
     <div className="dashboard">
-      <p>user: {userId}</p>
+      {/* <p>user: {userId}</p>
       <p>house: {houseId}</p>
-      <p>new task: {addedANewTask}</p>
+      <p>new task: {addedANewTask}</p> */}
       {/* <AddHouse /> */}
       <AddTask
         houseId={houseId}
         userId={userId}
         setAddedANewTask={setAddedANewTask}
       />
-      <AddTeam />
       <Tabs
         houseTasks={houseTasks}
         userTasks={userTasks}

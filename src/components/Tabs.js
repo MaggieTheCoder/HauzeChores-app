@@ -4,6 +4,7 @@ import propTypes from "prop-types";
 import "../styles/Tabs.css";
 import Task from "./Task";
 import UserTask from "./UserTask";
+// import alltasklogo from "../logos/tablogo-alltasks.svg";
 
 const Tabs = ({ houseTasks, setAddedANewTask, userId, userTasks, scores }) => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -19,23 +20,30 @@ const Tabs = ({ houseTasks, setAddedANewTask, userId, userTasks, scores }) => {
   return (
     <>
       <div className="tabs">
+        {/* <div className="all-tasks-tab"> */}
         <button
           type="button"
-          className={`tab ${checkActive(1, "active")}`}
+          className={`tab ${checkActive(1, "active_1")}`}
           onClick={() => handleClick(1)}
         >
           All Tasks{" "}
+          {/* <img
+            className="alltasks-logo"
+            src={alltasklogo}
+            alt="all tasks logo"
+          /> */}
         </button>
+        {/* </div> */}
         <button
           type="button"
-          className={`tab ${checkActive(2, "active")}`}
+          className={`tab ${checkActive(2, "active_2")}`}
           onClick={() => handleClick(2)}
         >
           My Tasks{" "}
         </button>
         <button
           type="button"
-          className={`tab ${checkActive(3, "active")}`}
+          className={`tab ${checkActive(3, "active_3")}`}
           onClick={() => handleClick(3)}
         >
           Leaderboard{" "}
@@ -82,7 +90,7 @@ const Tabs = ({ houseTasks, setAddedANewTask, userId, userTasks, scores }) => {
           <div className={`panel ${checkActive(1, "active")}`}>
             {scores.map((score) => {
               return (
-                <div>
+                <div className="leaderboard-panel">
                   Name: {score.username} score: {score.score}{" "}
                 </div>
               );

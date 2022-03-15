@@ -6,24 +6,26 @@ import "../styles/Task.css";
 
 const Task = ({ taskname, id, setAddedANewTask, userId }) => {
   return (
-    <div className="task">
-      <button
-        type="button"
-        className="task__button"
-        onClick={() => {
-          assignTaskToUser(userId, id, setAddedANewTask);
-        }}
-      >
-        Take it!
-      </button>
-      <button
-        type="button"
-        onClick={() => deleteTaskById(id, setAddedANewTask)}
-        className="task__button"
-      >
-        X
-      </button>
-      <p className="task__name">{taskname}</p>
+    <div className="task-container">
+      <div className="task">
+        <button
+          type="button"
+          className="task__button"
+          onClick={() => {
+            assignTaskToUser(userId, id, setAddedANewTask);
+          }}
+        >
+          Take it!
+        </button>
+        <p className="task__name">{taskname}</p>
+        <button
+          type="button"
+          onClick={() => deleteTaskById(id, setAddedANewTask)}
+          className="task__button"
+        >
+          X
+        </button>
+      </div>
     </div>
   );
 };

@@ -11,6 +11,7 @@ import postNewHouse from "../requests/postNewHouse";
 import setNewUserDetails from "../requests/setNewUserDetails";
 import searchAndJoin from "../requests/searchAndJoinExistingHouse";
 import "../styles/AddHouse.css";
+import Footer from "./Footer";
 
 const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
   const [name, setName] = useState();
@@ -47,7 +48,6 @@ const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
   };
   return (
     <div className="add-house">
-      {houseId}
       <form onSubmit={handleAddHouse} className="Addhouse__house">
         <input
           className="input-house__name"
@@ -90,6 +90,7 @@ const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
       >
         NEXT
       </button>
+      <Footer />
     </div>
   );
 };

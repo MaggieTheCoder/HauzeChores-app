@@ -5,17 +5,19 @@ import "../styles/UserTask.css";
 
 const UserTask = ({ taskname, id, userId, setAddedANewTask }) => {
   return (
-    <div className="usertask">
-      <button
-        className="usertask__button"
-        type="button"
-        onClick={() => {
-          completeATask(id, userId, setAddedANewTask);
-        }}
-      >
-        Done!
-      </button>
-      <p className="usertask__name">{taskname}</p>
+    <div className="usertask-container">
+      <div className="usertask">
+        <button
+          className="usertask__button"
+          type="button"
+          onClick={() => {
+            completeATask(id, userId, setAddedANewTask);
+          }}
+        >
+          Done!
+        </button>
+        <p className="usertask__name">{taskname}</p>
+      </div>
     </div>
   );
 };

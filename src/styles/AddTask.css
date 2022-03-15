@@ -1,38 +1,68 @@
+
 .add-task {
-  padding-top: 30px;
+  padding-top: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: rgb(178, 225, 239);
+  background-color: #99E5FF;
+  height: 120px;
+
+  
+}
+label {
+  font-family: "Menlo", sans-serif;
+  font-size: 25px;
+  color: #C60982;
+  margin-right: 20px;
 }
 
-.add-task button {
+.task__dropdown {
   font-family: "Menlo", sans-serif;
-  font-size: 15px;
-  padding-right: 5px;
-  padding-left: 5px;
-  background-color: #bf1689;
+  font-size: 20px;
+  font-style: italic;
+  margin: 10px;
+  height:50px;
+  border-radius: 10px;
+  padding: 0px 60px 0px 20px;
+}
+.add_task_button {
+  font-family: "Menlo", sans-serif;
+  font-size: 25px;
+  background-color: #C60982;
+  padding: 0px 50px 0px 50px;
+  border-radius: 15px;
   color: white;
+  height:50px;
+  
 }
 
 .custom-task {
-  background-color: rgb(178, 225, 239);
+  background-color: #99E5FF;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+  height: 80px;
+  padding-bottom: 100px;
 }
-
-.custom-task button {
+.add_task_button_custom {
   font-family: "Menlo", sans-serif;
-  font-size: 15px;
-  padding-right: 5px;
-  padding-left: 5px;
-  background-color: #bf1689;
+  font-size: 25px;
+  background-color: #C60982;
+  padding: 0px 60px 0px 60px;
+  border-radius: 15px;
   color: white;
+  height:50px;
+  margin-left: 20px;
 }
 
-.custom-task input {
-  font-size: 15px;
+.custom-task-input {
+  font-family: "Menlo", sans-serif;
+  font-style: italic;
+  font-size: 20px;
   margin: 10px;
+  height:50px;
+  border-radius: 10px;
+  height:50px;
+  padding: 0px 90px 0px 20px;
 }
