@@ -3,7 +3,6 @@
   height: 50px;
   padding-top: 5px;
   padding-bottom: 30px;
-
 }
 
 .task {
@@ -14,21 +13,20 @@
   margin-left: 10px;
   padding-left: 100px;
   padding-right: 100px;
-
 }
 .usertask {
-  background-color: #C60982;;
+  background-color: #c60982;
 }
 .task__button {
   font-family: "Menlo", sans-serif;
   font-size: 25px;
-  background-color: #C60982;
+  background-color: #c60982;
   padding: 3px 20px 3px 20px;
   border-radius: 15px;
   color: white;
 }
 
 .task__name {
-  color: #C60982;
+  color: white;
   font-size: 25px;
 }
