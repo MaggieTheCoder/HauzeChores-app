@@ -62,7 +62,11 @@ const AddHouse = ({ setHouseId, houseId, user, setCode, setUserId }) => {
         >
           CREATE
         </button>
-        {visibleItem && <p>Your unique code is `{randomStr}`</p>}
+        {visibleItem && (
+          <p className="unique-code__string">
+            Your unique code is `{randomStr}`
+          </p>
+        )}
 
         <br />
         <input
