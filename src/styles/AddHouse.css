@@ -42,6 +42,11 @@
   border-radius: 15px;
   text-align: center;
 }
+.unique-code__string {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
 .find_button {
   font-family: "Menlo", sans-serif;
   font-size: 25px;

@@ -91,7 +91,7 @@ const Tabs = ({ houseTasks, setAddedANewTask, userId, userTasks, scores }) => {
             {scores.map((score) => {
               return (
                 <div className="leaderboard-panel">
-                  Name: {score.username} Score: {score.score}{" "}
+                  Name: {score.username} Score: {score.score}
                 </div>
               );
             })}

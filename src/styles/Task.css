@@ -27,11 +27,11 @@
 }
 
 .task__name {
-  color: #c60982;
+  color: white;
   font-size: 25px;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 460px) {
   .task__button {
     font-size: 20px;
     padding: 1px 5px 1px 5px;

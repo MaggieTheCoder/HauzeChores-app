@@ -20,7 +20,7 @@ const NavBar = ({ user, logOut, code }) => {
               LOG OUT
             </button>
           </div>
-          {code && <p className="invitation_code"> Invitation code: {code}</p>}
+          {code && <p className="invitation_code"> Invite code: {code}</p>}
           {/* <Footer /> */}
         </div>
       )}
